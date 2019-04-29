@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SinWave">
+        <attr name="waveColor" format="color"/>
+        <attr name="waviness" format="float"/>
+    </declare-styleable>
+</resources>
