@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">WaveExample</string>
+
+    <string name="menu_seekbar_title">Manual</string>
+    <string name="menu_toolbar_title">Auto</string>
+    <string name="default_text">S\nO\nM\nE\n\nL\nA\nR\nG\nE\n\nT\nE\nX\nT</string>
 </resources>

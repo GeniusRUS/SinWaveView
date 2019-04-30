@@ -2,25 +2,28 @@ package com.genius.waveexample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.SeekBar
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), FragmentNavigation {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        sb_main.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                sw_main.updateWaviness(progress.toFloat() / sb_main.max)
+        bnv_main.setOnNavigationItemSelectedListener { menuItem ->
+            return@setOnNavigationItemSelectedListener when (menuItem.itemId) {
+                R.id.menu_seekbar -> {
+                    attachFragment(R.id.fl_main, SeekbarFragment.newInstance(), SeekbarFragment.TAG)
+                    true
+                }
+                R.id.menu_toolbar -> {
+                    attachFragment(R.id.fl_main, ToolbarFragment.newInstance(), ToolbarFragment.TAG)
+                    true
+                }
+                else -> false
             }
+        }
 
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {
-            }
-
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {
-            }
-        })
+        attachFragment(R.id.fl_main, SeekbarFragment.newInstance(), SeekbarFragment.TAG)
     }
 }

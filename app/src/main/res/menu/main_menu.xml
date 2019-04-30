@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_seekbar"
+        android:title="@string/menu_seekbar_title"
+        android:icon="@drawable/ic_linear_scale_black_24dp"/>
+
+    <item android:id="@+id/menu_toolbar"
+        android:title="@string/menu_toolbar_title"
+        android:icon="@drawable/ic_vertical_align_top_black_24dp"/>
+</menu>

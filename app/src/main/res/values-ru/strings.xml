@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WaveExample</string>
+
+    <string name="menu_seekbar_title">Ручной</string>
+    <string name="menu_toolbar_title">Автоматический</string>
+    <string name="default_text">Н\nЕ\nК\nО\nТ\nО\nР\nЫ\nЙ\n\n\nТ\nЕ\nК\nС\nT</string>
+</resources>
